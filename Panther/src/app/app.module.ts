@@ -7,6 +7,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {RouterModule,Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 export const firebase = {
   apiKey: "AIzaSyCI5BDcKoHYre2-YAVeVFPLrrMu_J_rDIQ",
@@ -20,7 +21,8 @@ export const firebase = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

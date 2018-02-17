@@ -8,6 +8,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {RouterModule,Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { Component } from '@angular/core/src/metadata/directives';
 
 export const firebase = {
   apiKey: "AIzaSyCI5BDcKoHYre2-YAVeVFPLrrMu_J_rDIQ",
@@ -30,7 +31,12 @@ export const firebase = {
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebase),
     MaterializeModule,
-    RouterModule,
+    RouterModule.forRoot([
+      {
+          path : "",
+          component : LoginComponent
+      }
+    ]),
     FormsModule
   ],
   providers: [],

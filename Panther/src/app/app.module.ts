@@ -21,6 +21,8 @@ export const firebase = {
   messagingSenderId: "778400565752"
 
 }
+import { environment } from '../environments/environment';
+import { AuthService } from './services/auth.service'
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ export const firebase = {
     BrowserModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebase),
+    AngularFireModule.initializeApp(environment.firebase),
     MaterializeModule,
     RouterModule.forRoot([
       {
@@ -44,7 +46,7 @@ export const firebase = {
     ]),
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

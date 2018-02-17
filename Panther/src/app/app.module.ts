@@ -9,16 +9,8 @@ import {RouterModule,Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { Component } from '@angular/core/src/metadata/directives';
-
-export const firebase = {
-  apiKey: "AIzaSyCI5BDcKoHYre2-YAVeVFPLrrMu_J_rDIQ",
-  authDomain: "blackpanther-6880b.firebaseapp.com",
-  databaseURL: "https://blackpanther-6880b.firebaseio.com",
-  projectId: "blackpanther-6880b",
-  storageBucket: "blackpanther-6880b.appspot.com",
-  messagingSenderId: "778400565752"
-
-}
+import { environment } from '../environments/environment';
+import { AuthService } from './services/auth.service'
 
 @NgModule({
   declarations: [
@@ -29,7 +21,7 @@ export const firebase = {
     BrowserModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFireModule.initializeApp(firebase),
+    AngularFireModule.initializeApp(environment.firebase),
     MaterializeModule,
     RouterModule.forRoot([
       {
@@ -39,7 +31,7 @@ export const firebase = {
     ]),
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

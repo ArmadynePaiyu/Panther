@@ -12,15 +12,6 @@ import { Component } from '@angular/core/src/metadata/directives';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
-export const firebase = {
-  apiKey: "AIzaSyCI5BDcKoHYre2-YAVeVFPLrrMu_J_rDIQ",
-  authDomain: "blackpanther-6880b.firebaseapp.com",
-  databaseURL: "https://blackpanther-6880b.firebaseio.com",
-  projectId: "blackpanther-6880b",
-  storageBucket: "blackpanther-6880b.appspot.com",
-  messagingSenderId: "778400565752"
-
-}
 import { environment } from '../environments/environment';
 import { AuthService } from './services/auth.service'
 

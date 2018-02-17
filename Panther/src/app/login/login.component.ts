@@ -11,7 +11,4 @@ export class LoginComponent  {
 
     constructor(public th : AuthService) { }
 
-    
-
-
 }

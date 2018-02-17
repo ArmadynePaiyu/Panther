@@ -9,6 +9,8 @@ import {RouterModule,Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { Component } from '@angular/core/src/metadata/directives';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 export const firebase = {
   apiKey: "AIzaSyCI5BDcKoHYre2-YAVeVFPLrrMu_J_rDIQ",
@@ -23,7 +25,9 @@ export const firebase = {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,8 @@ export const firebase = {
     RouterModule.forRoot([
       {
           path : "",
-          component : LoginComponent
+          component : HomeComponent
+
       }
     ]),
     FormsModule
